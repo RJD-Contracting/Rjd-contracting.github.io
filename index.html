@@ -10,7 +10,7 @@
     <!-- Google Corporate Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -39,87 +39,32 @@
             font-style: normal !important;
         }
 
-        /* Header & Navigation - Exact Match with Banner Image */
+        /* Header Layout for Banner Image */
         header {
-            background: linear-gradient(180deg, #051020 0%, #0A1B33 100%);
-            color: var(--white);
-            padding: 12px 18px;
+            background-color: #030A14;
+            padding: 10px 15px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.7);
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid var(--gold);
         }
 
-        .brand-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .banner-container {
             flex-grow: 1;
-        }
-
-        .logo-img {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--gold);
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-            flex-shrink: 0;
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .logo-main-title {
-            font-family: 'Cinzel', serif !important;
-            font-size: 1.6rem;
-            background: linear-gradient(180deg, #FFE89C 0%, #D4AF37 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-
-        .logo-sub-title {
-            font-size: 0.65rem;
-            color: #FFFFFF;
-            letter-spacing: 1px;
-            font-weight: 800;
-            margin-top: 3px;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
-        .logo-loc-box {
             display: flex;
             align-items: center;
-            gap: 6px;
-            margin-top: 3px;
+            max-width: 85%;
         }
 
-        .logo-loc-box::before, .logo-loc-box::after {
-            content: '';
-            display: inline-block;
-            height: 1px;
-            width: 20px;
-            background-color: var(--gold);
-        }
-
-        .logo-loc {
-            font-size: 0.55rem;
-            color: var(--gold);
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            text-transform: uppercase;
+        .header-banner-img {
+            width: 100%;
+            max-height: 65px;
+            object-fit: contain;
+            object-position: left center;
         }
 
         .lang-btn {
@@ -134,7 +79,7 @@
             transition: all 0.2s;
             box-shadow: 0 2px 6px rgba(0,0,0,0.4);
             flex-shrink: 0;
-            margin-left: 5px;
+            margin-left: 10px;
         }
 
         .lang-btn:hover {
@@ -421,17 +366,10 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header with Custom Banner Image -->
     <header>
-        <div class="brand-container">
-            <img src="https://raw.githubusercontent.com/rjdqatar/rjd-website/main/rjd-logo.png" alt="RJD Logo" class="logo-img" onerror="this.src='rjd-logo.png'">
-            <div class="logo">
-                <span class="logo-main-title" id="logo-rjd">RJD</span>
-                <span class="logo-sub-title" id="logo-sub">CONTRACTING & HOSPITALITY</span>
-                <div class="logo-loc-box">
-                    <span class="logo-loc" id="company-loc">DOHA, QATAR</span>
-                </div>
-            </div>
+        <div class="banner-container">
+            <img src="https://raw.githubusercontent.com/rjdqatar/rjd-website/main/header-banner.png" alt="RJD Contracting and Hospitality Banner" class="header-banner-img" onerror="this.src='header-banner.png'">
         </div>
         <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
     </header>
@@ -574,9 +512,6 @@
     <script>
         const content = {
             en: {
-                logoRjd: "RJD",
-                logoSub: "CONTRACTING & HOSPITALITY",
-                companyLoc: "DOHA, QATAR",
                 langBtn: "العربية",
                 heroTitle: "Your Trusted Contracting Partner in Qatar",
                 heroSubtitle: "Integrated MEP Contracting, Civil Construction, Manpower Supply, Facility Management, Maintenance, Cleaning and Hospitality Services in Qatar.",
@@ -603,9 +538,6 @@
                 waDept2Title: "Operations (Manpower & Cleaning)"
             },
             ar: {
-                logoRjd: "آر جي دي",
-                logoSub: "للمقاولات والضيافة",
-                companyLoc: "الدوحة، قطر",
                 langBtn: "English",
                 heroTitle: "شريكك الموثوق للمقاولات والأعمال في قطر",
                 heroSubtitle: "مقاولات الكهروميكانيك (MEP)، البناء المدني، توريد العمالة، إدارة المنشآت، الصيانة، خدمات التنظيف والضيافة المتكاملة في قطر.",
@@ -641,9 +573,6 @@
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
             const l = content[currentLang];
-            document.getElementById('logo-rjd').innerText = l.logoRjd;
-            document.getElementById('logo-sub').innerText = l.logoSub;
-            document.getElementById('company-loc').innerText = l.companyLoc;
             document.getElementById('lang-toggle-btn').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
             document.getElementById('hero-subtitle').innerText = l.heroSubtitle;
