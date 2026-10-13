@@ -39,14 +39,14 @@
             font-style: normal !important;
         }
 
-        /* Header Layout for Full Banner Image */
+        /* Seamless Header Integration */
         header {
-            background-color: #030A14;
-            padding: 8px 12px;
+            background-color: #061325;
+            padding: 5px 15px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.8);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.7);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -57,14 +57,14 @@
             flex-grow: 1;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
         }
 
         .header-banner-img {
             width: 100%;
-            max-width: 500px;
-            height: auto;
+            max-width: 420px;
+            height: 60px;
             object-fit: contain;
+            object-position: left center;
             display: block;
         }
 
@@ -367,7 +367,7 @@
 </head>
 <body>
 
-    <!-- Header with Full Banner Image -->
+    <!-- Header with Seamless Banner Image -->
     <header>
         <div class="banner-container">
             <img src="https://raw.githubusercontent.com/rjdqatar/rjd-website/main/header-banner.png" alt="RJD Contracting and Hospitality Banner" class="header-banner-img" onerror="this.src='header-banner.png'">
