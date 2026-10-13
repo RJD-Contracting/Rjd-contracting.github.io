@@ -36,11 +36,14 @@
     <style>
         :root {
             --navy: #0A192F;
+            --navy-light: #112240;
+            --navy-card: #1E3A5F;
             --gold: #D4AF37;
             --light-gold: #F4E8C1;
             --white: #FFFFFF;
-            --dark-gray: #333333;
-            --light-bg: #F8F9FA;
+            --text-gray: #E2E8F0;
+            --header-bg: #F8F9FA;
+            --header-text: #0A192F;
             --whatsapp-green: #25D366;
         }
 
@@ -52,16 +55,16 @@
         }
 
         body {
-            background-color: var(--light-bg);
-            color: var(--dark-gray);
+            background-color: var(--navy);
+            color: var(--text-gray);
             line-height: 1.6;
         }
 
-        /* Header & Navigation */
+        /* Header & Navigation (Off-white/Light Gray background with Navy Text) */
         header {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 12px 20px;
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 12px 25px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -69,129 +72,109 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 2px solid var(--gold);
         }
 
         .brand-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .logo-img {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--gold);
         }
 
         .logo h1 {
-            font-size: 1.1rem;
-            color: var(--gold);
-            font-weight: bold;
+            font-size: 1.25rem;
+            color: var(--header-text);
+            font-weight: 800;
             letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .logo p {
-            font-size: 0.7rem;
-            color: var(--white);
-            letter-spacing: 1px;
+            font-size: 0.75rem;
+            color: #4A5568;
+            letter-spacing: 1.5px;
+            font-weight: 600;
         }
 
         .lang-btn {
-            background-color: var(--gold);
-            color: var(--navy);
-            border: none;
-            padding: 6px 14px;
+            background-color: var(--navy);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 8px 16px;
             font-weight: bold;
             border-radius: 4px;
             cursor: pointer;
             font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 25, 47, 0.88), rgba(10, 25, 47, 0.88)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.92)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
-            padding: 65px 20px;
+            padding: 70px 20px;
             text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .hero h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--gold);
             margin-bottom: 15px;
             line-height: 1.3;
         }
 
         .hero p {
-            font-size: 1rem;
-            margin-bottom: 25px;
-            max-width: 800px;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: var(--gold);
-            color: var(--navy);
-            padding: 12px 22px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 0.95rem;
-            transition: opacity 0.2s;
-        }
-
-        .whatsapp-btn {
-            background-color: var(--whatsapp-green);
-            color: var(--white);
-        }
-
-        .cta-btn:hover {
-            opacity: 0.9;
+            color: var(--text-gray);
         }
 
         /* Containers & Sections */
         .container {
-            padding: 40px 20px;
+            padding: 45px 20px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            color: var(--navy);
-            margin-bottom: 30px;
+            color: var(--gold);
+            margin-bottom: 35px;
             position: relative;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
+            width: 60px;
             height: 3px;
             background-color: var(--gold);
-            margin: 8px auto 0;
+            margin: 10px auto 0;
         }
 
         /* Cards Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 25px;
         }
 
         @media(min-width: 768px) {
@@ -201,17 +184,20 @@
         }
 
         .card {
-            background: var(--white);
+            background: var(--navy-card);
             border-top: 4px solid var(--gold);
-            border-radius: 6px;
+            border-radius: 8px;
             padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            border-left: 1px solid rgba(212, 175, 55, 0.15);
+            border-right: 1px solid rgba(212, 175, 55, 0.15);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         .card h3 {
-            color: var(--navy);
-            margin-bottom: 12px;
-            font-size: 1.25rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
         }
 
         .card ul {
@@ -219,15 +205,17 @@
         }
 
         .card ul li {
-            padding: 6px 0;
+            padding: 8px 0;
             position: relative;
-            padding-left: 22px;
+            padding-left: 24px;
             font-size: 0.95rem;
+            color: var(--text-gray);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         [dir="rtl"] .card ul li {
             padding-left: 0;
-            padding-right: 22px;
+            padding-right: 24px;
         }
 
         .card ul li::before {
@@ -245,28 +233,152 @@
 
         /* Contact Section */
         .contact-box {
-            background: var(--navy);
+            background: var(--navy-light);
             color: var(--white);
-            padding: 35px 20px;
+            padding: 40px 25px;
             border-radius: 8px;
             text-align: center;
             border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
 
         .contact-box h3 {
             color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
         }
 
         .contact-info p {
-            margin: 10px 0;
-            font-size: 1rem;
+            margin: 12px 0;
+            font-size: 1.05rem;
+            color: var(--text-gray);
         }
 
         .contact-info a {
             color: var(--light-gold);
             text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-numbers-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .contact-number-card {
+            background: var(--navy-card);
+            padding: 15px 25px;
+            border-radius: 6px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            min-width: 250px;
+        }
+
+        /* Floating WhatsApp Widget with Department Pop-up */
+        .whatsapp-float-container {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+        }
+
+        .whatsapp-main-btn {
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-main-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-main-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        .whatsapp-popup {
+            position: absolute;
+            bottom: 75px;
+            right: 0;
+            width: 300px;
+            background: var(--navy-light);
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            border: 1px solid var(--gold);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .whatsapp-popup.active {
+            display: flex;
+        }
+
+        .whatsapp-popup-header {
+            background: var(--navy);
+            color: var(--gold);
+            padding: 12px 15px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .whatsapp-popup-body {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dept-btn {
+            background: var(--navy-card);
+            color: var(--white);
+            padding: 10px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: background 0.2s;
+            display: block;
+        }
+
+        .dept-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold);
+        }
+
+        .dept-title {
+            font-weight: bold;
+            color: var(--gold);
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .dept-num {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         footer {
@@ -275,11 +387,13 @@
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <div class="brand-container">
             <img src="https://rjdqatar.github.io/rjd-website/logo.png" alt="RJD Logo" class="logo-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><circle cx=\'25\' cy=\'25\' r=\'24\' fill=\'%230A192F\' stroke=\'%23D4AF37\' stroke-width=\'2\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\' font-weight=\'bold\' font-family=\'sans-serif\'>RJD</text></svg>'">
@@ -291,23 +405,22 @@
         <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <h2 id="hero-title">Your Trusted Contracting Partner in Qatar</h2>
         <p id="hero-subtitle">Integrated MEP Contracting, Civil Construction, Manpower Supply, Facility Management, Maintenance, Cleaning and Hospitality Services in Qatar.</p>
-        <div class="btn-group">
-            <a href="https://wa.me/97450098805?text=Hello%20RJD%20Contracting%20and%20Hospitality,%20I%20am%20interested%20in%20your%20contracting%20and%20subcontracting%20services%20in%20Qatar.%20Please%20share%20your%20company%20profile%20and%20service%20details." class="cta-btn whatsapp-btn" id="hero-wa-btn" target="_blank">Chat with Us on WhatsApp</a>
-            <a href="mailto:rjd.info.qa@gmail.com?subject=Quotation%20Request" class="cta-btn" id="hero-email-btn">Request a Quotation</a>
-        </div>
     </section>
 
+    <!-- Main Content -->
     <div class="container">
         <section>
             <h2 class="section-title" id="about-title">About Us</h2>
-            <p id="about-desc" style="text-align: center; max-width: 850px; margin: 0 auto 40px; font-size: 1.05rem;">
+            <p id="about-desc" style="text-align: center; max-width: 850px; margin: 0 auto 40px; font-size: 1.05rem; color: var(--text-gray);">
                 RJD Contracting and Hospitality is a Qatar-registered corporate solution provider based in Doha. We deliver dependable engineering, manpower, maintenance, and hospitality services designed for large contractors, consultants, and commercial clients across Qatar.
             </p>
         </section>
 
+        <!-- Services Grid -->
         <section>
             <h2 class="section-title" id="services-title">Our Core Services</h2>
             <div class="grid">
@@ -374,6 +487,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section style="margin-top: 50px;">
             <div class="contact-box">
                 <h3 id="contact-title">Contact & Business Enquiries</h3>
@@ -381,18 +495,51 @@
                     <p><strong><span id="c-company">RJD Contracting and Hospitality</span></strong></p>
                     <p>📍 <span id="c-location">Doha, Qatar</span></p>
                     <p>📧 Email: <a href="mailto:rjd.info.qa@gmail.com">rjd.info.qa@gmail.com</a></p>
-                    <p>📲 WhatsApp: <a href="https://wa.me/97450098805?text=Hello%20RJD%20Contracting%20and%20Hospitality,%20I%20am%20interested%20in%20your%20services." target="_blank">+974 5009 8805</a></p>
+                    
+                    <div class="contact-numbers-grid">
+                        <div class="contact-number-card">
+                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
+                            <a href="https://wa.me/97450098805?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20MEP%20and%20Civil%20services." target="_blank">📲 +974 5009 8805</a>
+                        </div>
+                        <div class="contact-number-card">
+                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
+                            <a href="https://wa.me/97474002655?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20Manpower%20and%20Cleaning%20services." target="_blank">📲 +974 7400 2655</a>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <a href="https://wa.me/97450098805?text=Hello%20RJD%20Contracting%20and%20Hospitality,%20I%20am%20inquiring%20from%20your%20website." class="cta-btn whatsapp-btn" id="contact-wa-btn" target="_blank">Chat with Us on WhatsApp</a>
             </div>
         </section>
     </div>
 
+    <!-- Floating WhatsApp Widget with Department Pop-up -->
+    <div class="whatsapp-float-container">
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="whatsapp-popup-header">
+                <span id="wa-popup-title">Chat with RJD Team</span>
+                <span style="cursor: pointer; font-size: 1.1rem;" onclick="toggleWhatsappPopup()">&times;</span>
+            </div>
+            <div class="whatsapp-popup-body">
+                <a href="https://wa.me/97450098805?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20from%20your%20website%20regarding%20Engineering%20and%20Projects." target="_blank" class="dept-btn">
+                    <span class="dept-title" id="wa-dept1-title">Engineering & Projects (MEP & Civil)</span>
+                    <span class="dept-num">📲 +974 5009 8805</span>
+                </a>
+                <a href="https://wa.me/97474002655?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20from%20your%20website%20regarding%20Manpower%20and%20Cleaning." target="_blank" class="dept-btn">
+                    <span class="dept-title" id="wa-dept2-title">Operations (Manpower & Cleaning)</span>
+                    <span class="dept-num">📲 +974 7400 2655</span>
+                </a>
+            </div>
+        </div>
+        <button class="whatsapp-main-btn" onclick="toggleWhatsappPopup()" aria-label="WhatsApp Chat">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 RJD Contracting and Hospitality. Doha, Qatar. All Rights Reserved.</p>
     </footer>
 
+    <!-- Script -->
     <script>
         const content = {
             en: {
@@ -401,8 +548,6 @@
                 langBtn: "العربية",
                 heroTitle: "Your Trusted Contracting Partner in Qatar",
                 heroSubtitle: "Integrated MEP Contracting, Civil Construction, Manpower Supply, Facility Management, Maintenance, Cleaning and Hospitality Services in Qatar.",
-                heroWaBtn: "Chat with Us on WhatsApp",
-                heroEmailBtn: "Request a Quotation",
                 aboutTitle: "About Us",
                 aboutDesc: "RJD Contracting and Hospitality is a Qatar-registered corporate solution provider based in Doha. We deliver dependable engineering, manpower, maintenance, and hospitality services designed for large contractors, consultants, and commercial clients across Qatar.",
                 servicesTitle: "Our Core Services",
@@ -419,7 +564,11 @@
                 contactTitle: "Contact & Business Enquiries",
                 cCompany: "RJD Contracting and Hospitality",
                 cLocation: "Doha, Qatar",
-                contactWaBtn: "Chat with Us on WhatsApp"
+                lblDept1: "Engineering & Projects",
+                lblDept2: "Operations & Services",
+                waPopupTitle: "Chat with RJD Team",
+                waDept1Title: "Engineering & Projects (MEP & Civil)",
+                waDept2Title: "Operations (Manpower & Cleaning)"
             },
             ar: {
                 companyName: "آر جي دي للمقاولات والضيافة",
@@ -427,8 +576,6 @@
                 langBtn: "English",
                 heroTitle: "شريكك الموثوق للمقاولات والأعمال في قطر",
                 heroSubtitle: "مقاولات الكهروميكانيك (MEP)، البناء المدني، توريد العمالة، إدارة المنشآت، الصيانة، خدمات التنظيف والضيافة المتكاملة في قطر.",
-                heroWaBtn: "تواصل معنا عبر واتساب",
-                heroEmailBtn: "طلب عرض سعر",
                 aboutTitle: "من نحن",
                 aboutDesc: "آر جي دي للمقاولات والضيافة هي شركة مسجلة في قطر ومقرها الدوحة. نقدم حلولاً هندسية، وتوريد العمالة، والصيانة، والخدمات الفندقية المصممة للمقاولين الكبار، الاستشاريين، والعملاء التجاريين في جميع أنحاء قطر.",
                 servicesTitle: "خدماتنا الرئيسية",
@@ -445,7 +592,11 @@
                 contactTitle: "التواصل والاستفسارات التجارية",
                 cCompany: "آر جي دي للمقاولات والضيافة",
                 cLocation: "الدوحة، قطر",
-                contactWaBtn: "تواصل معنا عبر واتساب"
+                lblDept1: "الهندسة والمشاريع",
+                lblDept2: "العمليات والخدمات",
+                waPopupTitle: "تواصل مع فريق آر جي دي",
+                waDept1Title: "الهندسة والمشاريع (MEP والبناء)",
+                waDept2Title: "العمليات (العمالة والتنظيف)"
             }
         };
 
@@ -462,8 +613,6 @@
             document.getElementById('lang-toggle-btn').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
             document.getElementById('hero-subtitle').innerText = l.heroSubtitle;
-            document.getElementById('hero-wa-btn').innerText = l.heroWaBtn;
-            document.getElementById('hero-email-btn').innerText = l.heroEmailBtn;
             document.getElementById('about-title').innerText = l.aboutTitle;
             document.getElementById('about-desc').innerText = l.aboutDesc;
             document.getElementById('services-title').innerText = l.servicesTitle;
@@ -505,7 +654,16 @@
             document.getElementById('contact-title').innerText = l.contactTitle;
             document.getElementById('c-company').innerText = l.cCompany;
             document.getElementById('c-location').innerText = l.cLocation;
-            document.getElementById('contact-wa-btn').innerText = l.contactWaBtn;
+            document.getElementById('lbl-dept1').innerText = l.lblDept1;
+            document.getElementById('lbl-dept2').innerText = l.lblDept2;
+            document.getElementById('wa-popup-title').innerText = l.waPopupTitle;
+            document.getElementById('wa-dept1-title').innerText = l.waDept1Title;
+            document.getElementById('wa-dept2-title').innerText = l.waDept2Title;
+        }
+
+        function toggleWhatsappPopup() {
+            const popup = document.getElementById('whatsappPopup');
+            popup.classList.toggle('active');
         }
     </script>
 </body>
