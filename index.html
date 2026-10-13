@@ -39,14 +39,14 @@
             font-style: normal !important;
         }
 
-        /* Header Layout for Banner Image */
+        /* Header Layout for Full Banner Image */
         header {
             background-color: #030A14;
-            padding: 10px 15px;
+            padding: 8px 12px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.7);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.8);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -57,21 +57,22 @@
             flex-grow: 1;
             display: flex;
             align-items: center;
-            max-width: 85%;
+            justify-content: flex-start;
         }
 
         .header-banner-img {
             width: 100%;
-            max-height: 65px;
+            max-width: 500px;
+            height: auto;
             object-fit: contain;
-            object-position: left center;
+            display: block;
         }
 
         .lang-btn {
             background-color: rgba(229, 193, 88, 0.1);
             color: var(--gold);
             border: 1.5px solid var(--gold);
-            padding: 6px 12px;
+            padding: 6px 14px;
             font-weight: 800;
             border-radius: 5px;
             cursor: pointer;
@@ -366,7 +367,7 @@
 </head>
 <body>
 
-    <!-- Header with Custom Banner Image -->
+    <!-- Header with Full Banner Image -->
     <header>
         <div class="banner-container">
             <img src="https://raw.githubusercontent.com/rjdqatar/rjd-website/main/header-banner.png" alt="RJD Contracting and Hospitality Banner" class="header-banner-img" onerror="this.src='header-banner.png'">
