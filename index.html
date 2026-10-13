@@ -10,7 +10,7 @@
     <!-- Google Corporate Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -21,8 +21,6 @@
             --light-gold: #F4E8C1;
             --white: #FFFFFF;
             --text-gray: #E2E8F0;
-            --header-bg: #F8F9FA;
-            --header-text: #0A192F;
             --whatsapp-green: #25D366;
         }
 
@@ -41,62 +39,81 @@
             font-style: normal !important;
         }
 
-        /* Header & Navigation */
+        /* Header & Navigation - Unique Silver-Ivory Gradient Header */
         header {
-            background-color: var(--header-bg);
-            color: var(--header-text);
-            padding: 10px 20px;
+            background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 100%);
+            color: var(--navy);
+            padding: 12px 25px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
         }
 
         .brand-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
         }
 
         .logo-img {
-            width: 52px;
-            height: 52px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--gold);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 3px 10px rgba(10, 25, 47, 0.3);
             flex-shrink: 0;
         }
 
-        .logo h1 {
-            font-size: 1.15rem;
-            color: var(--header-text);
-            font-weight: 800;
-            letter-spacing: 0.5px;
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-main-title {
+            font-size: 1.6rem;
+            color: var(--navy);
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            line-height: 1;
             text-transform: uppercase;
         }
 
-        .logo p {
+        .logo-sub-title {
             font-size: 0.72rem;
+            color: #1E3A5F;
+            letter-spacing: 1.8px;
+            font-weight: 800;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+
+        .logo-loc {
+            font-size: 0.65rem;
             color: #4A5568;
-            letter-spacing: 1.5px;
-            font-weight: 600;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-top: 1px;
+            text-transform: uppercase;
         }
 
         .lang-btn {
             background-color: var(--navy);
             color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 6px 14px;
-            font-weight: bold;
-            border-radius: 4px;
+            border: 1.5px solid var(--gold);
+            padding: 8px 18px;
+            font-weight: 800;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 0.85rem;
             transition: all 0.2s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
         .lang-btn:hover {
@@ -118,7 +135,7 @@
             color: var(--gold);
             margin-bottom: 15px;
             line-height: 1.3;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .hero p {
@@ -128,6 +145,7 @@
             margin-left: auto;
             margin-right: auto;
             color: var(--text-gray);
+            font-weight: 500;
         }
 
         /* Containers & Sections */
@@ -143,7 +161,7 @@
             margin-bottom: 35px;
             position: relative;
             font-size: 1.6rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .section-title::after {
@@ -183,7 +201,7 @@
             color: var(--gold);
             margin-bottom: 15px;
             font-size: 1.25rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .card ul {
@@ -196,6 +214,7 @@
             padding-left: 24px;
             font-size: 0.95rem;
             color: var(--text-gray);
+            font-weight: 600;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -232,19 +251,20 @@
             color: var(--gold);
             margin-bottom: 20px;
             font-size: 1.4rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .contact-info p {
             margin: 12px 0;
             font-size: 1rem;
             color: var(--text-gray);
+            font-weight: 600;
         }
 
         .contact-info a {
             color: var(--light-gold);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .contact-numbers-grid {
@@ -383,10 +403,11 @@
     <!-- Header -->
     <header>
         <div class="brand-container">
-            <img src="https://raw.githubusercontent.com/rjdqatar/rjd-website/main/rjd-logo.png" alt="RJD Logo" class="logo-img" onerror="this.src='https://rjdqatar.github.io/rjd-website/rjd-logo.png'">
+            <img src="https://raw.githubusercontent.com/rjdqatar/rjd-website/main/rjd-logo.png" alt="RJD Logo" class="logo-img" onerror="this.src='rjd-logo.png'">
             <div class="logo">
-                <h1 id="company-name">RJD Contracting & Hospitality</h1>
-                <p id="company-loc">DOHA, QATAR</p>
+                <span class="logo-main-title" id="logo-rjd">RJD</span>
+                <span class="logo-sub-title" id="logo-sub">Contracting & Hospitality</span>
+                <span class="logo-loc" id="company-loc">DOHA, QATAR</span>
             </div>
         </div>
         <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
@@ -530,7 +551,8 @@
     <script>
         const content = {
             en: {
-                companyName: "RJD Contracting & Hospitality",
+                logoRjd: "RJD",
+                logoSub: "Contracting & Hospitality",
                 companyLoc: "DOHA, QATAR",
                 langBtn: "العربية",
                 heroTitle: "Your Trusted Contracting Partner in Qatar",
@@ -558,7 +580,8 @@
                 waDept2Title: "Operations (Manpower & Cleaning)"
             },
             ar: {
-                companyName: "آر جي دي للمقاولات والضيافة",
+                logoRjd: "آر جي دي",
+                logoSub: "للمقاولات والضيافة",
                 companyLoc: "الدوحة، قطر",
                 langBtn: "English",
                 heroTitle: "شريكك الموثوق للمقاولات والأعمال في قطر",
@@ -567,7 +590,7 @@
                 aboutDesc: "آر جي دي للمقاولات والضيافة هي شركة مسجلة في قطر ومقرها الدوحة. نقدم حلولاً هندسية، وتوريد العمالة، والصيانة، والخدمات الفندقية المصممة للمقاولين الكبار، الاستشاريين، والعملاء التجاريين في جميع أنحاء قطر.",
                 servicesTitle: "خدماتنا الرئيسية",
                 s1Title: "مقاولات الكهروميكانيك (MEP)",
-                s1_1: "أعمال الكهرباء", s1_2: "أعمال السباكة", s1_3: "أنظمة التكييف (HVAC)", s1_4: "أنظمة إنذار الحريق", s1_5: "أنظمة مكافحة الحريق", s1_6: "أنظمة التيار الخفيف (ELV) والكميرات",
+                s1_1: "أعمال الكهرباء", s1_2: "أعمال Сباكة", s1_3: "أنظمة التكييف (HVAC)", s1_4: "أنظمة إنذار الحريق", s1_5: "أنظمة مكافحة الحريق", s1_6: "أنظمة التيار الخفيف (ELV) والكميرات",
                 s2Title: "البناء المدني والتجهيزات (Fit-Out)",
                 s2_1: "أعمال البناء المدني", s2_2: "التجهيزات الداخلية وأعمال الجبس", s2_3: "الأصباغ والتبليط", s2_4: "أعمال التجديد والتعديل",
                 s3Title: "توريد العمالة لمشاريع البناء",
@@ -595,7 +618,8 @@
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
             const l = content[currentLang];
-            document.getElementById('company-name').innerText = l.companyName;
+            document.getElementById('logo-rjd').innerText = l.logoRjd;
+            document.getElementById('logo-sub').innerText = l.logoSub;
             document.getElementById('company-loc').innerText = l.companyLoc;
             document.getElementById('lang-toggle-btn').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
