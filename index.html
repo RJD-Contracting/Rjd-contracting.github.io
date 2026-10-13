@@ -8,6 +8,8 @@
     <link rel="canonical" href="https://rjdqatar.github.io/rjd-website/">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
         :root {
             --navy: #0A192F;
             --navy-light: #112240;
@@ -25,7 +27,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
             font-style: normal !important;
         }
 
@@ -33,7 +35,7 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
-            font-style: normal;
+            font-style: normal !important;
         }
 
         /* Header & Navigation */
@@ -113,6 +115,7 @@
             color: var(--gold);
             margin-bottom: 15px;
             line-height: 1.3;
+            font-weight: 700;
         }
 
         .hero p {
@@ -137,6 +140,7 @@
             margin-bottom: 35px;
             position: relative;
             font-size: 1.6rem;
+            font-weight: 700;
         }
 
         .section-title::after {
@@ -176,6 +180,7 @@
             color: var(--gold);
             margin-bottom: 15px;
             font-size: 1.25rem;
+            font-weight: 700;
         }
 
         .card ul {
@@ -224,6 +229,7 @@
             color: var(--gold);
             margin-bottom: 20px;
             font-size: 1.4rem;
+            font-weight: 700;
         }
 
         .contact-info p {
@@ -374,7 +380,7 @@
     <!-- Header -->
     <header>
         <div class="brand-container">
-            <img src="logo.png" alt="RJD Logo" class="logo-img">
+            <img src="logo.png" alt="RJD Logo" class="logo-img" onerror="this.style.display='none'">
             <div class="logo">
                 <h1 id="company-name">RJD Contracting & Hospitality</h1>
                 <p id="company-loc">DOHA, QATAR</p>
@@ -565,8 +571,6 @@
                 s3_1: "عمالة ماهرة وشبه ماهرة", s3_2: "كوادر فنية متخصصة", s3_3: "عمالة عامة", s3_4: "دعم مشاريع البناء والإنشاءات", s3_5: "دعم مشاريع الكهروميكانيك (MEP)",
                 s4Title: "إدارة المنشآت والصيانة",
                 s4_1: "صيانة المباني والأنظمة الكهروميكانيكية", s4_2: "الصيانة الوقائية والتصحيحية", s4_3: "خدمات الطوارئ والأعطال", s4_4: "عقود الصيانة السنوية (AMC)", s4_5: "الصيانة طويلة الأمد للأبراج والشقق السكنية",
-                s5Title: "خدمات التنظيف والضيافة",
-                s5_1: "عقود تنظيف المباني والمنشآت التجارية", s5_2: "تنظيف الأبراج السكنية والشقق", s5_3: "خدمات التدبير المنزلي ودعم المطابخ", s5_4: "كوادر ضيافة محترفة",
                 contactTitle: "التواصل والاستفسارات التجارية",
                 cCompany: "آر جي دي للمقاولات والضيافة",
                 cLocation: "الدوحة، قطر",
