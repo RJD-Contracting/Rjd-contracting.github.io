@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJD Contracting and Hospitality | Qatar</title>
-    <meta name="description" content="Leading Contracting, MEP, Civil Construction, Manpower Supply, Facility Management, and Hospitality Services in Doha, Qatar.">
-    <meta name="keywords" content="MEP Contracting Company in Qatar, Construction Subcontractor in Qatar, Civil Construction and Fit-Out Qatar, Construction Manpower Supply Qatar, Building Maintenance Company in Qatar, Facility Management Services Qatar, Cleaning Contract Company in Qatar, Annual Maintenance Contract AMC Qatar">
+    <title>RJD Contracting and Hospitality | MEP & Construction Company in Qatar</title>
+    <meta name="description" content="RJD Contracting and Hospitality provides MEP contracting, civil construction, fit-out, manpower supply, building maintenance, AMC, cleaning and hospitality services in Qatar.">
+    <meta name="keywords" content="MEP Contracting Company in Qatar, Construction Subcontractor in Qatar, Civil Construction Company in Qatar, Fit-Out Contractor in Qatar, Construction Manpower Supply Qatar, Building Maintenance Company in Qatar, Facility Management Services Qatar, Annual Maintenance Contract Qatar, Cleaning Contract Company in Qatar, Commercial Cleaning Services Qatar, Hospitality Manpower Qatar">
     <link rel="canonical" href="https://rjdqatar.github.io/rjd-website/">
     
     <!-- Open Graph SEO -->
@@ -23,6 +23,7 @@
       "alternateName": "آر جي دي للمقاولات والضيافة",
       "url": "https://rjdqatar.github.io/rjd-website/",
       "email": "rjd.info.qa@gmail.com",
+      "telephone": "+97450098805",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Doha",
@@ -40,6 +41,7 @@
             --white: #FFFFFF;
             --dark-gray: #333333;
             --light-bg: #F8F9FA;
+            --whatsapp-green: #25D366;
         }
 
         * {
@@ -59,7 +61,7 @@
         header {
             background-color: var(--navy);
             color: var(--white);
-            padding: 15px 20px;
+            padding: 12px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -69,32 +71,49 @@
             align-items: center;
         }
 
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
+
         .logo h1 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--gold);
             font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
         .logo p {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--white);
+            letter-spacing: 1px;
         }
 
         .lang-btn {
             background-color: var(--gold);
             color: var(--navy);
             border: none;
-            padding: 6px 12px;
+            padding: 6px 14px;
             font-weight: bold;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 0.9rem;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(10, 25, 47, 0.88), rgba(10, 25, 47, 0.88)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
-            padding: 60px 20px;
+            padding: 65px 20px;
             text-align: center;
         }
 
@@ -102,25 +121,49 @@
             font-size: 1.8rem;
             color: var(--gold);
             margin-bottom: 15px;
+            line-height: 1.3;
         }
 
         .hero p {
             font-size: 1rem;
             margin-bottom: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             background-color: var(--gold);
             color: var(--navy);
-            padding: 12px 24px;
+            padding: 12px 22px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            margin: 5px;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
         }
 
-        /* Sections */
+        .whatsapp-btn {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Containers & Sections */
         .container {
             padding: 40px 20px;
             max-width: 1100px;
@@ -132,6 +175,7 @@
             color: var(--navy);
             margin-bottom: 30px;
             position: relative;
+            font-size: 1.6rem;
         }
 
         .section-title::after {
@@ -167,7 +211,7 @@
         .card h3 {
             color: var(--navy);
             margin-bottom: 12px;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
         .card ul {
@@ -175,14 +219,15 @@
         }
 
         .card ul li {
-            padding: 5px 0;
+            padding: 6px 0;
             position: relative;
-            padding-left: 20px;
+            padding-left: 22px;
+            font-size: 0.95rem;
         }
 
         [dir="rtl"] .card ul li {
             padding-left: 0;
-            padding-right: 20px;
+            padding-right: 22px;
         }
 
         .card ul li::before {
@@ -202,18 +247,21 @@
         .contact-box {
             background: var(--navy);
             color: var(--white);
-            padding: 30px;
+            padding: 35px 20px;
             border-radius: 8px;
             text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         .contact-box h3 {
             color: var(--gold);
             margin-bottom: 15px;
+            font-size: 1.4rem;
         }
 
         .contact-info p {
             margin: 10px 0;
+            font-size: 1rem;
         }
 
         .contact-info a {
@@ -222,10 +270,10 @@
         }
 
         footer {
-            background: #060e1a;
+            background: #050d18;
             color: #888;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             font-size: 0.85rem;
         }
     </style>
@@ -233,23 +281,29 @@
 <body>
 
     <header>
-        <div class="logo">
-            <h1 id="company-name">RJD Contracting & Hospitality</h1>
-            <p id="company-loc">Doha, Qatar</p>
+        <div class="brand-container">
+            <img src="https://rjdqatar.github.io/rjd-website/logo.png" alt="RJD Logo" class="logo-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><circle cx=\'25\' cy=\'25\' r=\'24\' fill=\'%230A192F\' stroke=\'%23D4AF37\' stroke-width=\'2\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23D4AF37\' font-size=\'14\' font-weight=\'bold\' font-family=\'sans-serif\'>RJD</text></svg>'">
+            <div class="logo">
+                <h1 id="company-name">RJD Contracting & Hospitality</h1>
+                <p id="company-loc">DOHA, QATAR</p>
+            </div>
         </div>
         <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
     </header>
 
     <section class="hero">
-        <h2 id="hero-title">Reliable Corporate & Subcontracting Partner in Qatar</h2>
-        <p id="hero-subtitle">Specialized in MEP Contracting, Civil Fit-Out, Skilled Manpower, Facility Maintenance, and Commercial Hospitality Services.</p>
-        <a href="mailto:rjd.info.qa@gmail.com?subject=Quotation%20Request" class="cta-btn" id="hero-btn">Request a Quotation</a>
+        <h2 id="hero-title">Your Trusted Contracting Partner in Qatar</h2>
+        <p id="hero-subtitle">Integrated MEP Contracting, Civil Construction, Manpower Supply, Facility Management, Maintenance, Cleaning and Hospitality Services in Qatar.</p>
+        <div class="btn-group">
+            <a href="https://wa.me/97450098805?text=Hello%20RJD%20Contracting%20and%20Hospitality,%20I%20am%20interested%20in%20your%20contracting%20and%20subcontracting%20services%20in%20Qatar.%20Please%20share%20your%20company%20profile%20and%20service%20details." class="cta-btn whatsapp-btn" id="hero-wa-btn" target="_blank">Chat with Us on WhatsApp</a>
+            <a href="mailto:rjd.info.qa@gmail.com?subject=Quotation%20Request" class="cta-btn" id="hero-email-btn">Request a Quotation</a>
+        </div>
     </section>
 
     <div class="container">
         <section>
             <h2 class="section-title" id="about-title">About Us</h2>
-            <p id="about-desc" style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+            <p id="about-desc" style="text-align: center; max-width: 850px; margin: 0 auto 40px; font-size: 1.05rem;">
                 RJD Contracting and Hospitality is a Qatar-registered corporate solution provider based in Doha. We deliver dependable engineering, manpower, maintenance, and hospitality services designed for large contractors, consultants, and commercial clients across Qatar.
             </p>
         </section>
@@ -264,9 +318,10 @@
                     <ul>
                         <li id="s1-1">Electrical Works</li>
                         <li id="s1-2">Plumbing Works</li>
-                        <li id="s1-3">HVAC Works</li>
-                        <li id="s1-4">Fire Alarm & Fire Fighting Systems</li>
-                        <li id="s1-5">ELV Systems, CCTV & Security</li>
+                        <li id="s1-3">HVAC Systems</li>
+                        <li id="s1-4">Fire Alarm Systems</li>
+                        <li id="s1-5">Fire Fighting Systems</li>
+                        <li id="s1-6">ELV Systems, CCTV & Security</li>
                     </ul>
                 </div>
 
@@ -288,7 +343,8 @@
                         <li id="s3-1">Skilled & Semi-Skilled Workers</li>
                         <li id="s3-2">Technical Manpower</li>
                         <li id="s3-3">General Helpers</li>
-                        <li id="s3-4">Support for Large Construction & MEP Projects</li>
+                        <li id="s3-4">Manpower Support for Construction Projects</li>
+                        <li id="s3-5">Manpower Support for MEP Projects</li>
                     </ul>
                 </div>
 
@@ -299,7 +355,8 @@
                         <li id="s4-1">Building & MEP Maintenance</li>
                         <li id="s4-2">Preventive & Corrective Maintenance</li>
                         <li id="s4-3">Emergency Breakdown Services</li>
-                        <li id="s4-4">Annual Maintenance Contracts (AMC) for Residential Towers & Apartments</li>
+                        <li id="s4-4">Annual Maintenance Contracts (AMC)</li>
+                        <li id="s4-5">Long-Term Maintenance for Residential Towers & Apartments</li>
                     </ul>
                 </div>
 
@@ -307,7 +364,7 @@
                 <div class="card" style="grid-column: 1 / -1;">
                     <h3 id="s5-title">Cleaning & Hospitality Services</h3>
                     <ul>
-                        <li id="s5-1">Commercial & Building Cleaning Contracts</li>
+                        <li id="s5-1">Commercial Cleaning & Building Cleaning Contracts</li>
                         <li id="s5-2">Residential Tower & Apartment Cleaning</li>
                         <li id="s5-3">Housekeeping, Stewarding & Kitchen Support</li>
                         <li id="s5-4">Professional Hospitality Manpower</li>
@@ -324,9 +381,10 @@
                     <p><strong><span id="c-company">RJD Contracting and Hospitality</span></strong></p>
                     <p>📍 <span id="c-location">Doha, Qatar</span></p>
                     <p>📧 Email: <a href="mailto:rjd.info.qa@gmail.com">rjd.info.qa@gmail.com</a></p>
+                    <p>📲 WhatsApp: <a href="https://wa.me/97450098805?text=Hello%20RJD%20Contracting%20and%20Hospitality,%20I%20am%20interested%20in%20your%20services." target="_blank">+974 5009 8805</a></p>
                 </div>
                 <br>
-                <a href="mailto:rjd.info.qa@gmail.com?subject=Inquiry%20from%20Website" class="cta-btn" id="contact-btn">Send Email Enquiry</a>
+                <a href="https://wa.me/97450098805?text=Hello%20RJD%20Contracting%20and%20Hospitality,%20I%20am%20inquiring%20from%20your%20website." class="cta-btn whatsapp-btn" id="contact-wa-btn" target="_blank">Chat with Us on WhatsApp</a>
             </div>
         </section>
     </div>
@@ -339,53 +397,55 @@
         const content = {
             en: {
                 companyName: "RJD Contracting & Hospitality",
-                companyLoc: "Doha, Qatar",
+                companyLoc: "DOHA, QATAR",
                 langBtn: "العربية",
-                heroTitle: "Reliable Corporate & Subcontracting Partner in Qatar",
-                heroSubtitle: "Specialized in MEP Contracting, Civil Fit-Out, Skilled Manpower, Facility Maintenance, and Commercial Hospitality Services.",
-                heroBtn: "Request a Quotation",
+                heroTitle: "Your Trusted Contracting Partner in Qatar",
+                heroSubtitle: "Integrated MEP Contracting, Civil Construction, Manpower Supply, Facility Management, Maintenance, Cleaning and Hospitality Services in Qatar.",
+                heroWaBtn: "Chat with Us on WhatsApp",
+                heroEmailBtn: "Request a Quotation",
                 aboutTitle: "About Us",
                 aboutDesc: "RJD Contracting and Hospitality is a Qatar-registered corporate solution provider based in Doha. We deliver dependable engineering, manpower, maintenance, and hospitality services designed for large contractors, consultants, and commercial clients across Qatar.",
                 servicesTitle: "Our Core Services",
                 s1Title: "MEP Contracting",
-                s1_1: "Electrical Works", s1_2: "Plumbing Works", s1_3: "HVAC Works", s1_4: "Fire Alarm & Fire Fighting Systems", s1_5: "ELV Systems, CCTV & Security",
+                s1_1: "Electrical Works", s1_2: "Plumbing Works", s1_3: "HVAC Systems", s1_4: "Fire Alarm Systems", s1_5: "Fire Fighting Systems", s1_6: "ELV Systems, CCTV & Security",
                 s2Title: "Civil Construction & Fit-Out",
                 s2_1: "Civil Construction Works", s2_2: "Building Fit-Out & Gypsum Works", s2_3: "Painting & Tiling", s2_4: "Renovation & Modification Works",
                 s3Title: "Construction Manpower Supply",
-                s3_1: "Skilled & Semi-Skilled Workers", s3_2: "Technical Manpower", s3_3: "General Helpers", s3_4: "Support for Large Construction & MEP Projects",
+                s3_1: "Skilled & Semi-Skilled Workers", s3_2: "Technical Manpower", s3_3: "General Helpers", s3_4: "Manpower Support for Construction Projects", s3_5: "Manpower Support for MEP Projects",
                 s4Title: "Facility Management & Maintenance",
-                s4_1: "Building & MEP Maintenance", s4_2: "Preventive & Corrective Maintenance", s4_3: "Emergency Breakdown Services", s4_4: "Annual Maintenance Contracts (AMC) for Towers & Apartments",
+                s4_1: "Building & MEP Maintenance", s4_2: "Preventive & Corrective Maintenance", s4_3: "Emergency Breakdown Services", s4_4: "Annual Maintenance Contracts (AMC)", s4_5: "Long-Term Maintenance for Residential Towers & Apartments",
                 s5Title: "Cleaning & Hospitality Services",
-                s5_1: "Commercial & Building Cleaning Contracts", s5_2: "Residential Tower & Apartment Cleaning", s5_3: "Housekeeping, Stewarding & Kitchen Support", s5_4: "Professional Hospitality Manpower",
+                s5_1: "Commercial Cleaning & Building Cleaning Contracts", s5_2: "Residential Tower & Apartment Cleaning", s5_3: "Housekeeping, Stewarding & Kitchen Support", s5_4: "Professional Hospitality Manpower",
                 contactTitle: "Contact & Business Enquiries",
                 cCompany: "RJD Contracting and Hospitality",
                 cLocation: "Doha, Qatar",
-                contactBtn: "Send Email Enquiry"
+                contactWaBtn: "Chat with Us on WhatsApp"
             },
             ar: {
                 companyName: "آر جي دي للمقاولات والضيافة",
                 companyLoc: "الدوحة، قطر",
                 langBtn: "English",
-                heroTitle: "شريك موثوق للمقاولات والأعمال في قطر",
-                heroSubtitle: "متخصصون في مقاولات الكهروميكانيكية (MEP)، البناء والتجهيزات، توريد العمالة، إدارة المنشآت، والخدمات الفندقية.",
-                heroBtn: "طلب عرض سعر",
+                heroTitle: "شريكك الموثوق للمقاولات والأعمال في قطر",
+                heroSubtitle: "مقاولات الكهروميكانيك (MEP)، البناء المدني، توريد العمالة، إدارة المنشآت، الصيانة، خدمات التنظيف والضيافة المتكاملة في قطر.",
+                heroWaBtn: "تواصل معنا عبر واتساب",
+                heroEmailBtn: "طلب عرض سعر",
                 aboutTitle: "من نحن",
                 aboutDesc: "آر جي دي للمقاولات والضيافة هي شركة مسجلة في قطر ومقرها الدوحة. نقدم حلولاً هندسية، وتوريد العمالة، والصيانة، والخدمات الفندقية المصممة للمقاولين الكبار، الاستشاريين، والعملاء التجاريين في جميع أنحاء قطر.",
                 servicesTitle: "خدماتنا الرئيسية",
                 s1Title: "مقاولات الكهروميكانيك (MEP)",
-                s1_1: "أعمال الكهرباء", s1_2: "أعمال السباكة", s1_3: "أعمال التكييف (HVAC)", s1_4: "أنظمة الإنذار ومكافحة الحريق", s1_5: "أنظمة التيار الخفيف (ELV) والكميرات",
+                s1_1: "أعمال الكهرباء", s1_2: "أعمال السباكة", s1_3: "أنظمة التكييف (HVAC)", s1_4: "أنظمة إنذار الحريق", s1_5: "أنظمة مكافحة الحريق", s1_6: "أنظمة التيار الخفيف (ELV) والكميرات",
                 s2Title: "البناء المدني والتجهيزات (Fit-Out)",
                 s2_1: "أعمال البناء المدني", s2_2: "التجهيزات الداخلية وأعمال الجبس", s2_3: "الأصباغ والتبليط", s2_4: "أعمال التجديد والتعديل",
                 s3Title: "توريد العمالة لمشاريع البناء",
-                s3_1: "عمالة ماهرة وشبه ماهرة", s3_2: "كوادر فنية متخصصة", s3_3: "عمالة عامة", s3_4: "دعم مشاريع البناء والمقاولات الكبرى",
+                s3_1: "عمالة ماهرة وشبه ماهرة", s3_2: "كوادر فنية متخصصة", s3_3: "عمالة عامة", s3_4: "دعم مشاريع البناء والإنشاءات", s3_5: "دعم مشاريع الكهروميكانيك (MEP)",
                 s4Title: "إدارة المنشآت والصيانة",
-                s4_1: "صيانة المباني والأنظمة الكهروميكانيكية", s4_2: "الصيانة الوقائية والتصحيحية", s4_3: "خدمات الطوارئ والأعطال", s4_4: "عقود الصيانة السنوية (AMC) للأبراج والشقق",
+                s4_1: "صيانة المباني والأنظمة الكهروميكانيكية", s4_2: "الصيانة الوقائية والتصحيحية", s4_3: "خدمات الطوارئ والأعطال", s4_4: "عقود الصيانة السنوية (AMC)", s4_5: "الصيانة طويلة الأمد للأبراج والشقق السكنية",
                 s5Title: "خدمات التنظيف والضيافة",
                 s5_1: "عقود تنظيف المباني والمنشآت التجارية", s5_2: "تنظيف الأبراج السكنية والشقق", s5_3: "خدمات التدبير المنزلي ودعم المطابخ", s5_4: "كوادر ضيافة محترفة",
                 contactTitle: "التواصل والاستفسارات التجارية",
                 cCompany: "آر جي دي للمقاولات والضيافة",
                 cLocation: "الدوحة، قطر",
-                contactBtn: "إرسال استفسار عبر البريد"
+                contactWaBtn: "تواصل معنا عبر واتساب"
             }
         };
 
@@ -402,7 +462,8 @@
             document.getElementById('lang-toggle-btn').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
             document.getElementById('hero-subtitle').innerText = l.heroSubtitle;
-            document.getElementById('hero-btn').innerText = l.heroBtn;
+            document.getElementById('hero-wa-btn').innerText = l.heroWaBtn;
+            document.getElementById('hero-email-btn').innerText = l.heroEmailBtn;
             document.getElementById('about-title').innerText = l.aboutTitle;
             document.getElementById('about-desc').innerText = l.aboutDesc;
             document.getElementById('services-title').innerText = l.servicesTitle;
@@ -413,6 +474,7 @@
             document.getElementById('s1-3').innerText = l.s1_3;
             document.getElementById('s1-4').innerText = l.s1_4;
             document.getElementById('s1-5').innerText = l.s1_5;
+            document.getElementById('s1-6').innerText = l.s1_6;
 
             document.getElementById('s2-title').innerText = l.s2Title;
             document.getElementById('s2-1').innerText = l.s2_1;
@@ -425,12 +487,14 @@
             document.getElementById('s3-2').innerText = l.s3_2;
             document.getElementById('s3-3').innerText = l.s3_3;
             document.getElementById('s3-4').innerText = l.s3_4;
+            document.getElementById('s3-5').innerText = l.s3_5;
 
             document.getElementById('s4-title').innerText = l.s4Title;
             document.getElementById('s4-1').innerText = l.s4_1;
             document.getElementById('s4-2').innerText = l.s4_2;
             document.getElementById('s4-3').innerText = l.s4_3;
             document.getElementById('s4-4').innerText = l.s4_4;
+            document.getElementById('s4-5').innerText = l.s4_5;
 
             document.getElementById('s5-title').innerText = l.s5Title;
             document.getElementById('s5-1').innerText = l.s5_1;
@@ -441,7 +505,7 @@
             document.getElementById('contact-title').innerText = l.contactTitle;
             document.getElementById('c-company').innerText = l.cCompany;
             document.getElementById('c-location').innerText = l.cLocation;
-            document.getElementById('contact-btn').innerText = l.contactBtn;
+            document.getElementById('contact-wa-btn').innerText = l.contactWaBtn;
         }
     </script>
 </body>
