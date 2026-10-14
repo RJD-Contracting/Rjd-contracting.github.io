@@ -136,27 +136,47 @@
             text-transform: uppercase;
         }
 
+        /* Enhanced Modern Language Button with Icon */
         .lang-btn {
             background-color: var(--navy);
             color: var(--white);
             border: 2px solid var(--accent-blue);
-            padding: 8px 14px;
+            padding: 8px 16px;
             font-weight: 800;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 0.8rem;
-            transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--white);
+            transition: transform 0.3s ease;
         }
 
         .lang-btn:hover {
             background-color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 58, 138, 0.4);
         }
 
-        /* Hero Section */
+        .lang-btn:hover svg {
+            transform: rotate(180deg);
+        }
+
+        /* Hero Section with Explicit Construction Background Image */
         .hero {
-            background: linear-gradient(rgba(6, 19, 37, 0.88), rgba(6, 19, 37, 0.88)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(6, 19, 37, 0.82), rgba(6, 19, 37, 0.82)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--white);
             padding: 85px 20px;
             text-align: center;
@@ -633,7 +653,10 @@
                 </div>
             </div>
         </div>
-        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">العربية</button>
+        <button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <span id="lang-btn-text">العربية</span>
+        </button>
     </header>
 
     <!-- Hero Section -->
@@ -960,7 +983,7 @@
             document.getElementById('logo-rjd').innerText = l.logoRjd;
             document.getElementById('logo-sub').innerText = l.logoSub;
             document.getElementById('company-loc').innerText = l.companyLoc;
-            document.getElementById('lang-toggle-btn').innerText = l.langBtn;
+            document.getElementById('lang-btn-text').innerText = l.langBtn;
             document.getElementById('hero-title').innerText = l.heroTitle;
             document.getElementById('hero-subtitle').innerText = l.heroSubtitle;
             document.getElementById('about-title').innerText = l.aboutTitle;
