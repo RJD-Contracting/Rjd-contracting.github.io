@@ -45,7 +45,7 @@
             }
         }
 
-        /* Fixed Professional Header / Banner Optimized for both Desktop & Mobile */
+        /* Fixed Professional Header / Banner */
         header {
             position: fixed;
             top: 0;
@@ -167,9 +167,9 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section with Vibrant Construction Background Image */
+        /* Hero Section with Guaranteed Visible Construction Background Image */
         .hero {
-            background: linear-gradient(rgba(6, 19, 37, 0.45), rgba(6, 19, 37, 0.55)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1600&q=85');
+            background: linear-gradient(rgba(6, 19, 37, 0.45), rgba(6, 19, 37, 0.65)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1032,7 +1032,7 @@
             document.getElementById('lbl-phone').innerText = l.lblPho;
             document.getElementById('lbl-service').innerText = l.lblSer;
             document.getElementById('lbl-email').innerText = l.lblEma;
-                document.getElementById('lbl-details').innerText = l.lblDet;
+            document.getElementById('lbl-details').innerText = l.lblDet;
             document.getElementById('rfq-submit-btn').innerText = l.rfqBtn;
         }
 
@@ -1068,7 +1068,7 @@
         function submitRfq(event) {
             event.preventDefault();
             const name = document.getElementById('rfqName').value;
-            const phone = document.getElementById('rfqPhoto').value || document.getElementById('rfqPhone').value;
+            const phone = document.getElementById('rfqPhone').value;
             const service = document.getElementById('rfqService').value;
             const email = document.getElementById('rfqEmail').value;
             const details = document.getElementById('rfqDetails').value;
