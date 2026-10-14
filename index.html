@@ -17,8 +17,9 @@
             --navy: #061325;
             --navy-light: #0B1E38;
             --navy-card: #122B4F;
-            --accent-blue: #1E3A8A; /* প্রিমিয়াম নেভি ব্লু অ্যাকসেন্ট কালার */
-            --light-bg: #F4EEDC;
+            --gold: #E5C158;
+            --light-gold: #F4E8C1;
+            --light-bg: #F4EEDC; /* এ কে আইকনের মতো প্রিমিয়াম লাইট ব্যানার ব্যাকগ্রাউন্ড */
             --white: #FFFFFF;
             --text-gray: #E2E8F0;
             --whatsapp-green: #25D366;
@@ -45,7 +46,7 @@
             }
         }
 
-        /* Fixed Banner Header */
+        /* Fixed Left-Aligned Professional Header / Banner */
         header {
             position: fixed;
             top: 0;
@@ -53,22 +54,21 @@
             width: 100%;
             z-index: 1000;
             background-color: var(--light-bg);
-            padding: 10px 20px;
+            padding: 12px 25px;
             box-shadow: 0 4px 25px rgba(0,0,0,0.6);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid var(--accent-blue);
+            border-bottom: 3px solid var(--gold);
         }
 
         .brand-container {
             display: flex;
             align-items: center;
-            gap: 14px;
-            max-width: 1100px;
-            margin: 0 auto;
-            width: 100%;
-            justify-content: center;
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0;
+            justify-content: flex-start;
         }
 
         .logo-img {
@@ -76,7 +76,7 @@
             height: 55px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--accent-blue);
+            border: 2px solid var(--navy);
             box-shadow: 0 3px 10px rgba(0,0,0,0.3);
             flex-shrink: 0;
         }
@@ -85,6 +85,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: left;
+        }
+
+        [dir="rtl"] .logo {
+            text-align: right;
         }
 
         .logo-main-title {
@@ -120,7 +125,7 @@
             content: '';
             display: inline-block;
             height: 1px;
-            width: 15px;
+            width: 12px;
             background-color: #0B1E38;
         }
 
@@ -133,10 +138,10 @@
         }
 
         .lang-btn {
-            background-color: var(--navy-card);
-            color: var(--white);
-            border: 2px solid var(--accent-blue);
-            padding: 7px 14px;
+            background-color: var(--navy);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 8px 16px;
             font-weight: 800;
             border-radius: 6px;
             cursor: pointer;
@@ -144,33 +149,20 @@
             transition: all 0.2s;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
             flex-shrink: 0;
-            position: absolute;
-            right: 15px;
-            top: 22px;
-        }
-
-        [dir="rtl"] .lang-btn {
-            right: auto;
-            left: 15px;
         }
 
         .lang-btn:hover {
-            background-color: var(--accent-blue);
+            background-color: var(--gold);
+            color: var(--navy);
         }
 
-        /* Hero Section */
+        /* Hero Section with Real Construction Background Image */
         .hero {
-            background-color: var(--navy);
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(30, 58, 138, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(18, 43, 79, 0.8) 0%, transparent 50%),
-                linear-gradient(rgba(30, 58, 138, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(30, 58, 138, 0.05) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+            background: linear-gradient(rgba(6, 19, 37, 0.85), rgba(6, 19, 37, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
             padding: 85px 20px;
             text-align: center;
-            border-bottom: 2px solid rgba(30, 58, 138, 0.3);
+            border-bottom: 2px solid rgba(229, 193, 88, 0.3);
             position: relative;
             overflow: hidden;
             box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7);
@@ -178,7 +170,7 @@
 
         .hero h2 {
             font-size: 2rem;
-            color: var(--white);
+            color: var(--gold);
             margin-bottom: 15px;
             line-height: 1.3;
             font-weight: 800;
@@ -204,7 +196,7 @@
 
         .section-title {
             text-align: center;
-            color: var(--white);
+            color: var(--gold);
             margin-bottom: 35px;
             position: relative;
             font-size: 1.6rem;
@@ -216,7 +208,7 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--accent-blue);
+            background-color: var(--gold);
             margin: 10px auto 0;
         }
 
@@ -235,13 +227,13 @@
 
         .card {
             background: var(--navy-card);
-            border-top: 4px solid var(--accent-blue);
+            border-top: 4px solid var(--gold);
             border-radius: 8px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            border-left: 1px solid rgba(30, 58, 138, 0.2);
-            border-right: 1px solid rgba(30, 58, 138, 0.2);
-            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            border-left: 1px solid rgba(229, 193, 88, 0.2);
+            border-right: 1px solid rgba(229, 193, 88, 0.2);
+            border-bottom: 1px solid rgba(229, 193, 88, 0.2);
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
@@ -249,12 +241,12 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
-            border-color: var(--accent-blue);
+            box-shadow: 0 10px 25px rgba(229, 193, 88, 0.2);
+            border-color: var(--gold);
         }
 
         .card h3 {
-            color: var(--white);
+            color: var(--gold);
             margin-bottom: 15px;
             font-size: 1.25rem;
             font-weight: 800;
@@ -290,7 +282,7 @@
 
         .card ul li::before {
             content: '✓';
-            color: var(--accent-blue);
+            color: var(--gold);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -325,7 +317,7 @@
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
-            border: 2px solid var(--accent-blue);
+            border: 2px solid var(--gold);
             box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             padding: 30px;
             position: relative;
@@ -336,18 +328,18 @@
             top: 15px;
             right: 20px;
             font-size: 1.8rem;
-            color: var(--white);
+            color: var(--gold);
             cursor: pointer;
             background: none;
             border: none;
         }
 
         .modal-title {
-            color: var(--white);
+            color: var(--gold);
             font-size: 1.5rem;
             font-weight: 800;
             margin-bottom: 15px;
-            border-bottom: 1px solid rgba(30, 58, 138, 0.4);
+            border-bottom: 1px solid rgba(229, 193, 88, 0.4);
             padding-bottom: 10px;
         }
 
@@ -376,7 +368,7 @@
 
         .modal-body ul li::before {
             content: '•';
-            color: var(--accent-blue);
+            color: var(--gold);
             position: absolute;
             left: 0;
             font-size: 1.2rem;
@@ -390,7 +382,7 @@
         /* Quick RFQ Form Section */
         .rfq-section {
             background: var(--navy-light);
-            border: 1px solid rgba(30, 58, 138, 0.4);
+            border: 1px solid rgba(229, 193, 88, 0.4);
             border-radius: 10px;
             padding: 40px 30px;
             margin-top: 50px;
@@ -421,14 +413,14 @@
         }
 
         .form-group label {
-            color: var(--white);
+            color: var(--gold);
             font-weight: 700;
             font-size: 0.9rem;
         }
 
         .form-control {
             background: var(--navy);
-            border: 1px solid rgba(30, 58, 138, 0.4);
+            border: 1px solid rgba(229, 193, 88, 0.4);
             border-radius: 6px;
             padding: 12px 15px;
             color: var(--white);
@@ -438,7 +430,7 @@
         }
 
         .form-control:focus {
-            border-color: var(--accent-blue);
+            border-color: var(--gold);
         }
 
         textarea.form-control {
@@ -447,8 +439,8 @@
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--navy-card) 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--gold) 0%, #C49B27 100%);
+            color: var(--navy);
             border: none;
             padding: 14px 25px;
             font-weight: 800;
@@ -457,7 +449,7 @@
             font-size: 1rem;
             transition: transform 0.2s, opacity 0.2s;
             grid-column: 1 / -1;
-            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+            box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3);
         }
 
         .submit-btn:hover {
@@ -472,13 +464,13 @@
             padding: 40px 25px;
             border-radius: 8px;
             text-align: center;
-            border: 1px solid rgba(30, 58, 138, 0.4);
+            border: 1px solid rgba(229, 193, 88, 0.4);
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             margin-top: 40px;
         }
 
         .contact-box h3 {
-            color: var(--white);
+            color: var(--gold);
             margin-bottom: 20px;
             font-size: 1.4rem;
             font-weight: 800;
@@ -492,7 +484,7 @@
         }
 
         .contact-info a {
-            color: var(--white);
+            color: var(--light-gold);
             text-decoration: none;
             font-weight: 700;
         }
@@ -509,7 +501,7 @@
             background: var(--navy-card);
             padding: 15px 25px;
             border-radius: 6px;
-            border: 1px solid rgba(30, 58, 138, 0.3);
+            border: 1px solid rgba(229, 193, 88, 0.3);
             min-width: 250px;
         }
 
@@ -554,7 +546,7 @@
             background: var(--navy-light);
             border-radius: 10px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-            border: 1px solid var(--accent-blue);
+            border: 1px solid var(--gold);
             display: none;
             flex-direction: column;
             overflow: hidden;
@@ -566,11 +558,11 @@
 
         .whatsapp-popup-header {
             background: var(--navy);
-            color: var(--white);
+            color: var(--gold);
             padding: 12px 15px;
             font-weight: bold;
             font-size: 0.95rem;
-            border-bottom: 1px solid rgba(30, 58, 138, 0.4);
+            border-bottom: 1px solid rgba(229, 193, 88, 0.4);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -589,19 +581,19 @@
             padding: 10px 12px;
             border-radius: 6px;
             text-decoration: none;
-            border: 1px solid rgba(30, 58, 138, 0.3);
+            border: 1px solid rgba(229, 193, 88, 0.3);
             transition: background 0.2s;
             display: block;
         }
 
         .dept-btn:hover {
-            background: rgba(30, 58, 138, 0.3);
-            border-color: var(--accent-blue);
+            background: rgba(229, 193, 88, 0.2);
+            border-color: var(--gold);
         }
 
         .dept-title {
             font-weight: bold;
-            color: var(--white);
+            color: var(--gold);
             font-size: 0.9rem;
             display: block;
             margin-bottom: 3px;
@@ -618,7 +610,7 @@
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
-            border-top: 1px solid rgba(30, 58, 138, 0.2);
+            border-top: 1px solid rgba(229, 193, 88, 0.2);
             margin-top: 50px;
         }
     </style>
@@ -765,11 +757,11 @@
                     
                     <div class="contact-numbers-grid">
                         <div class="contact-number-card">
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
+                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
                             <a href="https://wa.me/97450098805?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20MEP%20and%20Civil%20services." target="_blank">📲 +974 5009 8805</a>
                         </div>
                         <div class="contact-number-card">
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
+                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
                             <a href="https://wa.me/97474002655?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20Manpower%20and%20Cleaning%20services." target="_blank">📲 +974 7400 2655</a>
                         </div>
                     </div>
@@ -881,7 +873,7 @@
                 cCompany: "آر جي دي للمقاولات والضيافة",
                 cLocation: "الدوحة، قطر",
                 lblDept1: "الهندسة والمشاريع",
-                lblDept2: "العمليات الخدمات",
+                lblDept2: "العمليات والخدمات",
                 waPopupTitle: "تواصل مع فريق آر جي دي",
                 waDept1Title: "الهندسة والمشاريع (MEP والبناء)",
                 waDept2Title: "العمليات (العمالة والتنظيف)",
@@ -921,7 +913,7 @@
                 cleaning: {
                     title: "Cleaning & Hospitality Services",
                     desc: "Professional cleaning contracts and hospitality manpower support to maintain pristine hygiene and world-class guest service standards.",
-                    items: ["Commercial Building & Office Deep Cleaning", "Residential Tower & Apartment Cleaning Contracts", "Housekeeping, Stewarding & Kitchen Crew Support", "Professional Hospitality Staff for Events & Hotels"]
+                    items: ["Commercial Building & Office Deep Cleaning", "Residential Tower & Apartment Cleaning Contracts", "Housekeeping, Stewarding & Kitchen Support", "Professional Hospitality Manpower"]
                 }
             },
             ar: {
@@ -1035,7 +1027,7 @@
             });
             listHtml += '</ul>';
 
-            document.getElementById('modalBody').innerHTML = `<p>${data.desc}</p><h4 style="color:var(--white); margin-bottom:10px; font-size:1.05rem;">Scope of Work:</h4>${listHtml}`;
+            document.getElementById('modalBody').innerHTML = `<p>${data.desc}</p><h4 style="color:var(--gold); margin-bottom:10px; font-size:1.05rem;">Scope of Work:</h4>${listHtml}`;
             document.getElementById('serviceModal').classList.add('active');
         }
 
