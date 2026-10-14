@@ -17,9 +17,8 @@
             --navy: #061325;
             --navy-light: #0B1E38;
             --navy-card: #122B4F;
-            --gold: #E5C158;
-            --light-gold: #F4E8C1;
-            --light-bg: #F4EEDC; /* এ কে আইকনের মতো প্রিমিয়াম লাইট ব্যানার ব্যাকগ্রাউন্ড */
+            --accent-blue: #1E3A8A;
+            --light-bg: #F4EEDC;
             --white: #FFFFFF;
             --text-gray: #E2E8F0;
             --whatsapp-green: #25D366;
@@ -54,12 +53,12 @@
             width: 100%;
             z-index: 1000;
             background-color: var(--light-bg);
-            padding: 12px 25px;
+            padding: 12px 20px;
             box-shadow: 0 4px 25px rgba(0,0,0,0.6);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid var(--gold);
+            border-bottom: 3px solid var(--accent-blue);
         }
 
         .brand-container {
@@ -139,9 +138,9 @@
 
         .lang-btn {
             background-color: var(--navy);
-            color: var(--gold);
-            border: 2px solid var(--gold);
-            padding: 8px 16px;
+            color: var(--white);
+            border: 2px solid var(--accent-blue);
+            padding: 8px 14px;
             font-weight: 800;
             border-radius: 6px;
             cursor: pointer;
@@ -152,17 +151,16 @@
         }
 
         .lang-btn:hover {
-            background-color: var(--gold);
-            color: var(--navy);
+            background-color: var(--accent-blue);
         }
 
-        /* Hero Section with Real Construction Background Image */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(6, 19, 37, 0.85), rgba(6, 19, 37, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(6, 19, 37, 0.88), rgba(6, 19, 37, 0.88)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: var(--white);
             padding: 85px 20px;
             text-align: center;
-            border-bottom: 2px solid rgba(229, 193, 88, 0.3);
+            border-bottom: 2px solid rgba(30, 58, 138, 0.4);
             position: relative;
             overflow: hidden;
             box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7);
@@ -170,7 +168,7 @@
 
         .hero h2 {
             font-size: 2rem;
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 15px;
             line-height: 1.3;
             font-weight: 800;
@@ -196,7 +194,7 @@
 
         .section-title {
             text-align: center;
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 35px;
             position: relative;
             font-size: 1.6rem;
@@ -208,7 +206,7 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--gold);
+            background-color: var(--accent-blue);
             margin: 10px auto 0;
         }
 
@@ -227,13 +225,13 @@
 
         .card {
             background: var(--navy-card);
-            border-top: 4px solid var(--gold);
+            border-top: 4px solid var(--accent-blue);
             border-radius: 8px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            border-left: 1px solid rgba(229, 193, 88, 0.2);
-            border-right: 1px solid rgba(229, 193, 88, 0.2);
-            border-bottom: 1px solid rgba(229, 193, 88, 0.2);
+            border-left: 1px solid rgba(30, 58, 138, 0.25);
+            border-right: 1px solid rgba(30, 58, 138, 0.25);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.25);
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
@@ -241,12 +239,12 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(229, 193, 88, 0.2);
-            border-color: var(--gold);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+            border-color: var(--accent-blue);
         }
 
         .card h3 {
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 15px;
             font-size: 1.25rem;
             font-weight: 800;
@@ -282,7 +280,7 @@
 
         .card ul li::before {
             content: '✓';
-            color: var(--gold);
+            color: var(--white);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -317,7 +315,7 @@
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
-            border: 2px solid var(--gold);
+            border: 2px solid var(--accent-blue);
             box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             padding: 30px;
             position: relative;
@@ -328,18 +326,18 @@
             top: 15px;
             right: 20px;
             font-size: 1.8rem;
-            color: var(--gold);
+            color: var(--white);
             cursor: pointer;
             background: none;
             border: none;
         }
 
         .modal-title {
-            color: var(--gold);
+            color: var(--white);
             font-size: 1.5rem;
             font-weight: 800;
             margin-bottom: 15px;
-            border-bottom: 1px solid rgba(229, 193, 88, 0.4);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.4);
             padding-bottom: 10px;
         }
 
@@ -368,7 +366,7 @@
 
         .modal-body ul li::before {
             content: '•';
-            color: var(--gold);
+            color: var(--white);
             position: absolute;
             left: 0;
             font-size: 1.2rem;
@@ -382,11 +380,13 @@
         /* Quick RFQ Form Section */
         .rfq-section {
             background: var(--navy-light);
-            border: 1px solid rgba(229, 193, 88, 0.4);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             border-radius: 10px;
             padding: 40px 30px;
             margin-top: 50px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .rfq-form {
@@ -394,6 +394,7 @@
             grid-template-columns: 1fr;
             gap: 20px;
             margin-top: 20px;
+            width: 100%;
         }
 
         @media(min-width: 768px) {
@@ -406,6 +407,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            width: 100%;
         }
 
         .form-group.full {
@@ -413,24 +415,25 @@
         }
 
         .form-group label {
-            color: var(--gold);
+            color: var(--white);
             font-weight: 700;
             font-size: 0.9rem;
         }
 
         .form-control {
             background: var(--navy);
-            border: 1px solid rgba(229, 193, 88, 0.4);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             border-radius: 6px;
             padding: 12px 15px;
             color: var(--white);
             font-size: 0.95rem;
             outline: none;
+            width: 100%;
             transition: border-color 0.2s;
         }
 
         .form-control:focus {
-            border-color: var(--gold);
+            border-color: var(--accent-blue);
         }
 
         textarea.form-control {
@@ -439,17 +442,18 @@
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, var(--gold) 0%, #C49B27 100%);
-            color: var(--navy);
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--navy-card) 100%);
+            color: var(--white);
             border: none;
             padding: 14px 25px;
             font-weight: 800;
             border-radius: 6px;
             cursor: pointer;
             font-size: 1rem;
+            width: 100%;
             transition: transform 0.2s, opacity 0.2s;
             grid-column: 1 / -1;
-            box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
         }
 
         .submit-btn:hover {
@@ -464,13 +468,13 @@
             padding: 40px 25px;
             border-radius: 8px;
             text-align: center;
-            border: 1px solid rgba(229, 193, 88, 0.4);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             margin-top: 40px;
         }
 
         .contact-box h3 {
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 20px;
             font-size: 1.4rem;
             font-weight: 800;
@@ -484,7 +488,7 @@
         }
 
         .contact-info a {
-            color: var(--light-gold);
+            color: var(--white);
             text-decoration: none;
             font-weight: 700;
         }
@@ -501,7 +505,7 @@
             background: var(--navy-card);
             padding: 15px 25px;
             border-radius: 6px;
-            border: 1px solid rgba(229, 193, 88, 0.3);
+            border: 1px solid rgba(30, 58, 138, 0.3);
             min-width: 250px;
         }
 
@@ -546,7 +550,7 @@
             background: var(--navy-light);
             border-radius: 10px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-            border: 1px solid var(--gold);
+            border: 1px solid var(--accent-blue);
             display: none;
             flex-direction: column;
             overflow: hidden;
@@ -558,11 +562,11 @@
 
         .whatsapp-popup-header {
             background: var(--navy);
-            color: var(--gold);
+            color: var(--white);
             padding: 12px 15px;
             font-weight: bold;
             font-size: 0.95rem;
-            border-bottom: 1px solid rgba(229, 193, 88, 0.4);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.4);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -581,19 +585,19 @@
             padding: 10px 12px;
             border-radius: 6px;
             text-decoration: none;
-            border: 1px solid rgba(229, 193, 88, 0.3);
+            border: 1px solid rgba(30, 58, 138, 0.3);
             transition: background 0.2s;
             display: block;
         }
 
         .dept-btn:hover {
-            background: rgba(229, 193, 88, 0.2);
-            border-color: var(--gold);
+            background: rgba(30, 58, 138, 0.3);
+            border-color: var(--accent-blue);
         }
 
         .dept-title {
             font-weight: bold;
-            color: var(--gold);
+            color: var(--white);
             font-size: 0.9rem;
             display: block;
             margin-bottom: 3px;
@@ -610,7 +614,7 @@
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
-            border-top: 1px solid rgba(229, 193, 88, 0.2);
+            border-top: 1px solid rgba(30, 58, 138, 0.2);
             margin-top: 50px;
         }
     </style>
@@ -757,11 +761,11 @@
                     
                     <div class="contact-numbers-grid">
                         <div class="contact-number-card">
-                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
+                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
                             <a href="https://wa.me/97450098805?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20MEP%20and%20Civil%20services." target="_blank">📲 +974 5009 8805</a>
                         </div>
                         <div class="contact-number-card">
-                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
+                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
                             <a href="https://wa.me/97474002655?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20Manpower%20and%20Cleaning%20services." target="_blank">📲 +974 7400 2655</a>
                         </div>
                     </div>
@@ -1027,7 +1031,7 @@
             });
             listHtml += '</ul>';
 
-            document.getElementById('modalBody').innerHTML = `<p>${data.desc}</p><h4 style="color:var(--gold); margin-bottom:10px; font-size:1.05rem;">Scope of Work:</h4>${listHtml}`;
+            document.getElementById('modalBody').innerHTML = `<p>${data.desc}</p><h4 style="color:var(--white); margin-bottom:10px; font-size:1.05rem;">Scope of Work:</h4>${listHtml}`;
             document.getElementById('serviceModal').classList.add('active');
         }
 
