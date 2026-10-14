@@ -53,26 +53,26 @@
             width: 100%;
             z-index: 1000;
             background-color: var(--light-bg);
-            padding: 12px 30px;
+            padding: 10px 15px;
             box-shadow: 0 4px 25px rgba(0,0,0,0.6);
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid var(--accent-blue);
+            gap: 12px;
         }
 
         .brand-container {
             display: flex;
             align-items: center;
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0;
-            justify-content: flex-start;
+            gap: 10px;
+            flex-grow: 1;
+            min-width: 0;
         }
 
         .logo-img {
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--navy);
@@ -86,6 +86,8 @@
             flex-direction: column;
             justify-content: center;
             text-align: left;
+            min-width: 0;
+            flex-grow: 1;
         }
 
         [dir="rtl"] .logo {
@@ -94,30 +96,32 @@
 
         .logo-main-title {
             font-family: 'Cinzel', serif !important;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             background: linear-gradient(180deg, #122B4F 0%, #061325 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             line-height: 1.1;
             text-transform: uppercase;
         }
 
         .logo-sub-title {
-            font-size: 0.65rem;
+            font-size: 0.54rem;
             color: #0B1E38;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.4px;
             font-weight: 800;
             margin-top: 2px;
             text-transform: uppercase;
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .logo-loc-box {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             margin-top: 2px;
         }
 
@@ -125,14 +129,14 @@
             content: '';
             display: inline-block;
             height: 1px;
-            width: 12px;
+            width: 8px;
             background-color: #0B1E38;
         }
 
         .logo-loc {
-            font-size: 0.52rem;
+            font-size: 0.46rem;
             color: #0B1E38;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -142,22 +146,23 @@
             background-color: var(--navy);
             color: var(--white);
             border: 2px solid var(--accent-blue);
-            padding: 8px 16px;
+            padding: 7px 12px;
             font-weight: 800;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: all 0.2s ease;
             box-shadow: 0 3px 10px rgba(0,0,0,0.3);
             flex-shrink: 0;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
+            white-space: nowrap;
         }
 
         .lang-btn svg {
-            width: 16px;
-            height: 16px;
+            width: 15px;
+            height: 15px;
             fill: var(--white);
             transition: transform 0.3s ease;
         }
@@ -167,9 +172,13 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section with Guaranteed Visible Construction Background Image */
+        .lang-btn:hover svg {
+            transform: rotate(180deg);
+        }
+
+        /* Hero Section with Premium High-Rise Building & Tower Construction Background */
         .hero {
-            background: linear-gradient(rgba(6, 19, 37, 0.45), rgba(6, 19, 37, 0.65)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85');
+            background: linear-gradient(rgba(6, 19, 37, 0.50), rgba(6, 19, 37, 0.70)), url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1600&q=85');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
