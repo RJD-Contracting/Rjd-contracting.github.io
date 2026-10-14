@@ -17,8 +17,8 @@
             --navy: #061325;
             --navy-light: #0B1E38;
             --navy-card: #122B4F;
-            --gold: #E5C158;
-            --light-gold: #F4E8C1;
+            --accent-blue: #1E3A8A; /* প্রিমিয়াম নেভি ব্লু অ্যাকসেন্ট কালার */
+            --light-bg: #F4EEDC;
             --white: #FFFFFF;
             --text-gray: #E2E8F0;
             --whatsapp-green: #25D366;
@@ -36,27 +36,39 @@
             background-color: var(--navy);
             color: var(--text-gray);
             line-height: 1.6;
+            padding-top: 130px;
         }
 
-        /* Perfect Corporate Header */
+        @media(max-width: 768px) {
+            body {
+                padding-top: 105px;
+            }
+        }
+
+        /* Fixed Banner Header */
         header {
-            background: linear-gradient(180deg, #051020 0%, #0A1B33 100%);
-            color: var(--white);
-            padding: 10px 20px;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.7);
+            background-color: var(--light-bg);
+            padding: 10px 20px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.6);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--gold);
+            border-bottom: 3px solid var(--accent-blue);
         }
 
         .brand-container {
             display: flex;
             align-items: center;
             gap: 14px;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            justify-content: center;
         }
 
         .logo-img {
@@ -64,8 +76,8 @@
             height: 55px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--gold);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
             flex-shrink: 0;
         }
 
@@ -78,7 +90,7 @@
         .logo-main-title {
             font-family: 'Cinzel', serif !important;
             font-size: 1.55rem;
-            background: linear-gradient(180deg, #FFE89C 0%, #D4AF37 100%);
+            background: linear-gradient(180deg, #122B4F 0%, #061325 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -89,7 +101,7 @@
 
         .logo-sub-title {
             font-size: 0.62rem;
-            color: #FFFFFF;
+            color: #0B1E38;
             letter-spacing: 0.8px;
             font-weight: 800;
             margin-top: 2px;
@@ -109,50 +121,56 @@
             display: inline-block;
             height: 1px;
             width: 15px;
-            background-color: var(--gold);
+            background-color: #0B1E38;
         }
 
         .logo-loc {
             font-size: 0.52rem;
-            color: var(--gold);
+            color: #0B1E38;
             letter-spacing: 1.5px;
             font-weight: 700;
             text-transform: uppercase;
         }
 
         .lang-btn {
-            background-color: rgba(229, 193, 88, 0.1);
-            color: var(--gold);
-            border: 1.5px solid var(--gold);
-            padding: 6px 14px;
+            background-color: var(--navy-card);
+            color: var(--white);
+            border: 2px solid var(--accent-blue);
+            padding: 7px 14px;
             font-weight: 800;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 0.8rem;
             transition: all 0.2s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
             flex-shrink: 0;
+            position: absolute;
+            right: 15px;
+            top: 22px;
+        }
+
+        [dir="rtl"] .lang-btn {
+            right: auto;
+            left: 15px;
         }
 
         .lang-btn:hover {
-            background-color: var(--gold);
-            color: var(--navy);
+            background-color: var(--accent-blue);
         }
 
-        /* Hero Section with Pure CSS Premium Engineering Grid & Glow Effect */
+        /* Hero Section */
         .hero {
             background-color: var(--navy);
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(229, 193, 88, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 20% 30%, rgba(30, 58, 138, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 80% 70%, rgba(18, 43, 79, 0.8) 0%, transparent 50%),
-                linear-gradient(rgba(229, 193, 88, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(229, 193, 88, 0.05) 1px, transparent 1px);
+                linear-gradient(rgba(30, 58, 138, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 58, 138, 0.05) 1px, transparent 1px);
             background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-            background-position: 0 0, 0 0, 0 0, 0 0;
             color: var(--white);
-            padding: 90px 20px;
+            padding: 85px 20px;
             text-align: center;
-            border-bottom: 2px solid rgba(229, 193, 88, 0.3);
+            border-bottom: 2px solid rgba(30, 58, 138, 0.3);
             position: relative;
             overflow: hidden;
             box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7);
@@ -160,7 +178,7 @@
 
         .hero h2 {
             font-size: 2rem;
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 15px;
             line-height: 1.3;
             font-weight: 800;
@@ -186,7 +204,7 @@
 
         .section-title {
             text-align: center;
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 35px;
             position: relative;
             font-size: 1.6rem;
@@ -198,11 +216,11 @@
             display: block;
             width: 60px;
             height: 3px;
-            background-color: var(--gold);
+            background-color: var(--accent-blue);
             margin: 10px auto 0;
         }
 
-        /* Cards Grid with Premium Hover Effects */
+        /* Cards Grid */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -217,13 +235,13 @@
 
         .card {
             background: var(--navy-card);
-            border-top: 4px solid var(--gold);
+            border-top: 4px solid var(--accent-blue);
             border-radius: 8px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            border-left: 1px solid rgba(229, 193, 88, 0.15);
-            border-right: 1px solid rgba(229, 193, 88, 0.15);
-            border-bottom: 1px solid rgba(229, 193, 88, 0.15);
+            border-left: 1px solid rgba(30, 58, 138, 0.2);
+            border-right: 1px solid rgba(30, 58, 138, 0.2);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
@@ -231,12 +249,12 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(229, 193, 88, 0.15);
-            border-color: var(--gold);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+            border-color: var(--accent-blue);
         }
 
         .card h3 {
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 15px;
             font-size: 1.25rem;
             font-weight: 800;
@@ -272,7 +290,7 @@
 
         .card ul li::before {
             content: '✓';
-            color: var(--gold);
+            color: var(--accent-blue);
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -307,7 +325,7 @@
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
-            border: 2px solid var(--gold);
+            border: 2px solid var(--accent-blue);
             box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             padding: 30px;
             position: relative;
@@ -318,18 +336,18 @@
             top: 15px;
             right: 20px;
             font-size: 1.8rem;
-            color: var(--gold);
+            color: var(--white);
             cursor: pointer;
             background: none;
             border: none;
         }
 
         .modal-title {
-            color: var(--gold);
+            color: var(--white);
             font-size: 1.5rem;
             font-weight: 800;
             margin-bottom: 15px;
-            border-bottom: 1px solid rgba(229, 193, 88, 0.3);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.4);
             padding-bottom: 10px;
         }
 
@@ -358,7 +376,7 @@
 
         .modal-body ul li::before {
             content: '•';
-            color: var(--gold);
+            color: var(--accent-blue);
             position: absolute;
             left: 0;
             font-size: 1.2rem;
@@ -372,7 +390,7 @@
         /* Quick RFQ Form Section */
         .rfq-section {
             background: var(--navy-light);
-            border: 1px solid rgba(229, 193, 88, 0.3);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             border-radius: 10px;
             padding: 40px 30px;
             margin-top: 50px;
@@ -403,14 +421,14 @@
         }
 
         .form-group label {
-            color: var(--gold);
+            color: var(--white);
             font-weight: 700;
             font-size: 0.9rem;
         }
 
         .form-control {
             background: var(--navy);
-            border: 1px solid rgba(229, 193, 88, 0.3);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             border-radius: 6px;
             padding: 12px 15px;
             color: var(--white);
@@ -420,7 +438,7 @@
         }
 
         .form-control:focus {
-            border-color: var(--gold);
+            border-color: var(--accent-blue);
         }
 
         textarea.form-control {
@@ -429,8 +447,8 @@
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, var(--gold) 0%, #C49B27 100%);
-            color: var(--navy);
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--navy-card) 100%);
+            color: var(--white);
             border: none;
             padding: 14px 25px;
             font-weight: 800;
@@ -439,7 +457,7 @@
             font-size: 1rem;
             transition: transform 0.2s, opacity 0.2s;
             grid-column: 1 / -1;
-            box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
         }
 
         .submit-btn:hover {
@@ -454,13 +472,13 @@
             padding: 40px 25px;
             border-radius: 8px;
             text-align: center;
-            border: 1px solid rgba(229, 193, 88, 0.3);
+            border: 1px solid rgba(30, 58, 138, 0.4);
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             margin-top: 40px;
         }
 
         .contact-box h3 {
-            color: var(--gold);
+            color: var(--white);
             margin-bottom: 20px;
             font-size: 1.4rem;
             font-weight: 800;
@@ -474,7 +492,7 @@
         }
 
         .contact-info a {
-            color: var(--light-gold);
+            color: var(--white);
             text-decoration: none;
             font-weight: 700;
         }
@@ -491,7 +509,7 @@
             background: var(--navy-card);
             padding: 15px 25px;
             border-radius: 6px;
-            border: 1px solid rgba(229, 193, 88, 0.2);
+            border: 1px solid rgba(30, 58, 138, 0.3);
             min-width: 250px;
         }
 
@@ -536,7 +554,7 @@
             background: var(--navy-light);
             border-radius: 10px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-            border: 1px solid var(--gold);
+            border: 1px solid var(--accent-blue);
             display: none;
             flex-direction: column;
             overflow: hidden;
@@ -548,11 +566,11 @@
 
         .whatsapp-popup-header {
             background: var(--navy);
-            color: var(--gold);
+            color: var(--white);
             padding: 12px 15px;
             font-weight: bold;
             font-size: 0.95rem;
-            border-bottom: 1px solid rgba(229, 193, 88, 0.2);
+            border-bottom: 1px solid rgba(30, 58, 138, 0.4);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -571,19 +589,19 @@
             padding: 10px 12px;
             border-radius: 6px;
             text-decoration: none;
-            border: 1px solid rgba(229, 193, 88, 0.2);
+            border: 1px solid rgba(30, 58, 138, 0.3);
             transition: background 0.2s;
             display: block;
         }
 
         .dept-btn:hover {
-            background: rgba(229, 193, 88, 0.15);
-            border-color: var(--gold);
+            background: rgba(30, 58, 138, 0.3);
+            border-color: var(--accent-blue);
         }
 
         .dept-title {
             font-weight: bold;
-            color: var(--gold);
+            color: var(--white);
             font-size: 0.9rem;
             display: block;
             margin-bottom: 3px;
@@ -600,14 +618,14 @@
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
-            border-top: 1px solid rgba(229, 193, 88, 0.1);
+            border-top: 1px solid rgba(30, 58, 138, 0.2);
             margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header / Banner -->
     <header>
         <div class="brand-container">
             <img src="https://raw.githubusercontent.com/RJD-Contracting/rjd-website/main/rjd-logo.png" alt="RJD Logo" class="logo-img" onerror="this.src='rjd-logo.png'">
@@ -747,11 +765,11 @@
                     
                     <div class="contact-numbers-grid">
                         <div class="contact-number-card">
-                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
+                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px;" id="lbl-dept1">Engineering & Projects</p>
                             <a href="https://wa.me/97450098805?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20MEP%20and%20Civil%20services." target="_blank">📲 +974 5009 8805</a>
                         </div>
                         <div class="contact-number-card">
-                            <p style="font-size: 0.85rem; color: var(--gold); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
+                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 5px;" id="lbl-dept2">Operations & Services</p>
                             <a href="https://wa.me/97474002655?text=Hello%20RJD%20Team,%20I%20am%20inquiring%20regarding%20Manpower%20and%20Cleaning%20services." target="_blank">📲 +974 7400 2655</a>
                         </div>
                     </div>
@@ -863,7 +881,7 @@
                 cCompany: "آر جي دي للمقاولات والضيافة",
                 cLocation: "الدوحة، قطر",
                 lblDept1: "الهندسة والمشاريع",
-                lblDept2: "العمليات والخدمات",
+                lblDept2: "العمليات الخدمات",
                 waPopupTitle: "تواصل مع فريق آر جي دي",
                 waDept1Title: "الهندسة والمشاريع (MEP والبناء)",
                 waDept2Title: "العمليات (العمالة والتنظيف)",
@@ -1017,7 +1035,7 @@
             });
             listHtml += '</ul>';
 
-            document.getElementById('modalBody').innerHTML = `<p>${data.desc}</p><h4 style="color:var(--gold); margin-bottom:10px; font-size:1.05rem;">Scope of Work:</h4>${listHtml}`;
+            document.getElementById('modalBody').innerHTML = `<p>${data.desc}</p><h4 style="color:var(--white); margin-bottom:10px; font-size:1.05rem;">Scope of Work:</h4>${listHtml}`;
             document.getElementById('serviceModal').classList.add('active');
         }
 
